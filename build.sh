@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-if [ $1 == "build" ]
+if [[ $1 == "build" ]]
 then
    echo "Building Maven Project"
    echo -en "\n"
@@ -11,7 +11,7 @@ then
 fi
 
 
-if [ $1 == "test" ]
+if [[ $1 == "test" ]]
 then
    echo "Testing Maven Project"
    echo -en "\n"

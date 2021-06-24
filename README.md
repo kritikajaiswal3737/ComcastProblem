@@ -10,7 +10,8 @@ I have made the following assumptions while designing the solution.
 3. When the program is run with -f option, the filename should be passed in the argument and not as STDIN.
 
 ## How to Build the application:
-This is a java program and can be built using maven. Below are the instructions to build the project.
+This is a java program and can be built using maven. Below are the instructions to build the project.<br />
+Note: Maven and java should be installed on the system to run the below.(https://maven.apache.org/install.html)
 1. Download the project.
 2. Navigate to ComcastProblem directory in command line.
 3. Run the script build.sh as below:<br />

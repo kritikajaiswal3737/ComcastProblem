@@ -7,11 +7,18 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
+/**
+ * This class is used to calculate the sum of the digits from the given input String.
+ */
 public class SumProblem {
 
   private static final Appendable append = System.out;
-  public static void main(String args[]) {
 
+  /**
+   * Main method.
+   * @param args The arguments passed to the program.
+   */
+  public static void main(String args[]) {
 
     int position = -1;
     String word = "";
@@ -48,7 +55,11 @@ public class SumProblem {
     }
   }
 
-
+  /**
+   * This helper method helps to calculate the position of the flag -f in the argument array.
+   * @param args Array of arguments passed to the program.
+   * @return Position of -f flag.
+   */
   private static int helper(String[] args) {
     for (int i = 0; i < args.length; i++) {
       if (args[i].equals("-f")) {
@@ -58,6 +69,11 @@ public class SumProblem {
     return -1;
   }
 
+  /**
+   * This method validates all the arguments passed to the program.
+   * @param args Array of arguments passed to the program.
+   * @return True if all the arguments passed are valid and False if any argument is invalid.
+   */
   public static boolean validateInput(String[] args) {
     int pos = helper(args);
     Set<String> valids = new HashSet<>();
@@ -79,11 +95,23 @@ public class SumProblem {
 return true;
   }
 
+  /**
+   * This method reads input from STDIN.
+   * @param read Readable object.
+   * @return String that is read from STDIN.
+   */
   public static String readInput(Readable read) {
     Scanner scan = new Scanner(read);
     return scan.next();
   }
 
+  /**
+   * This method reads input from a file.
+   * @param args Array of arguments passed to the program.
+   * @param position Index of -f argument.
+   * @return String read from the file.
+   * @throws IOException When the file is invalid.
+   */
   public static String readFile(String[] args, int position) throws IOException{
     StringBuilder record = new StringBuilder();
     String line = null;
@@ -94,6 +122,11 @@ return true;
     return record.toString();
   }
 
+  /**
+   * This method writes output i.e sum to STDOUT.
+   * @param write The appendable object.
+   * @param number The sum that needs to be outputted to user.
+   */
   public static void writeOutput(Appendable write, Long number) {
     try {
       write.append(number.toString());
@@ -102,7 +135,11 @@ return true;
     }
   }
 
-
+  /**
+   * This method displays any messages to the user as STDOUT.
+   * @param write The appendable object.
+   * @param msg The message to be displayed.
+   */
   public static void writeMessage(Appendable write, String msg) {
     try {
       write.append(msg);
@@ -111,6 +148,11 @@ return true;
     }
   }
 
+  /**
+   * This method calculated sum for hexadecimal numbers.
+   * @param word The string for which sum needs to be calculated.
+   * @return The sum of digits.
+   */
   public static long processHexDecimal(String word) {
     long sum = 0;
     char ch;
@@ -125,6 +167,11 @@ return true;
     return sum;
   }
 
+  /**
+   * This method calculates sum for decimal numbers.
+   * @param word The string for which sum needs to be calculated.
+   * @return The sum of digits.
+   */
   public static long processDecimal(String word) {
     long sum = 0;
     char ch;

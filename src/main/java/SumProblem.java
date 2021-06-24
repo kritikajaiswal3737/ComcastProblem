@@ -38,10 +38,7 @@ public class SumProblem {
           } catch (IOException e) {
             writeMessage(append, "File name incorrect in the argument");
           }
-        } //else {
-          //writeMessage(append, "File name missing in the argument");
-          //System.exit(0);
-        //}
+        }
       }
 
       if (arguments.contains("-x")) {
